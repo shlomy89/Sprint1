@@ -1,0 +1,263 @@
+html, body, div, span, h1, h2, table {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+.background {
+    opacity: 0.2;
+    background: url('../img/background.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game {
+    position: relative;
+    height: 100%;
+    z-index: 5;
+}
+
+h1.title {
+    font-size: 1.8em;
+    width: 200px;
+    text-align: center;
+    margin: 1em auto;
+}
+
+table {
+    margin: 0 auto;
+}
+
+.copyrights {
+    color: rgb(130, 130, 130);
+    font-size: 13px;
+    width: 250px;
+    margin: 2em auto;
+}
+
+.cell {
+    background-color: rgba(184, 184, 184, 0.5);
+    border-style: outset;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 0;
+    border-radius: 5px;
+}
+
+.cell:hover {
+    cursor: pointer;
+}
+
+.cell:active, .exposed {
+    background-color:  rgb(165, 165, 165);
+    border-style: inset;
+}
+
+.exposed:hover {
+    cursor: default;
+}
+
+.mine img {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+.mine.exposed img {
+    display: block;
+}
+
+.number.exposed {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.flag {
+    background-size: 40px;
+    background-image: url('../img/flag.png');
+}
+
+.smiley {
+    border: 2px solid #eee;
+    background-color: rgb(105, 105, 105);
+    width: 64px;
+    height: 64px;
+    background-size: 60px;
+    background-image: url("../img/smiley.jpeg");
+    background-repeat: no-repeat;
+    box-shadow: 6px 7px 1px #eee;
+    display: block;
+    margin: 2em auto;
+}
+
+.mine_smiley {
+    background-size: 62px;
+    background-repeat: no-repeat;
+    background-image: url("../img/mine_smiley.jpeg");
+}
+
+.won_smiley {
+    background-size: 53px;
+    width: 60px;
+    background-repeat: no-repeat;
+    background-image: url("../img/won_smiley.jpeg");
+}
+
+.smiley:active {
+    background-color: rgb(105, 105, 105);
+    border-style: inset;
+    box-shadow: -6px -7px 1px #eee;
+}
+
+.smiley:hover {
+    cursor: pointer;
+}
+
+.size-selector {
+    display: block;
+    width: 250px;
+    margin: 2em auto;
+}
+
+.size-selector label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+}
+
+.size-selector button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 80px;
+}
+
+.size-selector button:active {
+    border: 2px inset rgb(198, 198, 198);
+}
+
+.size-selector button:hover, .size-selector button:active {
+    cursor: pointer;
+}
+
+.information {
+    height: 50px;
+    margin-top: 1.5em;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.information h2 {
+    font-size: 1.2em;
+    display: inline-block;
+    margin: 0 10px;
+    background-color: rgb(211, 227, 239);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal-wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1.5em;
+    width: 300px;
+    height: 100px;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 50%);
+}
+
+.modal .modal-buttons {
+    width: 200px;
+    position: absolute;
+    top: 6em;
+    left: 5em;
+}
+
+.modal button {
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.modal button:first-child {
+    margin-right: 10px;
+}
+
+.modal .content .best-score {
+    margin-top: 0.9em;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.modal h2 {
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: #44285e;
+    text-shadow: 2px 2px rgb(0 0 0 / 20%);
+}
+
+.show {
+    display: block;
+}
+
+.scores table {
+    width: 365px;
+    border: 1px solid #eee;
+    margin-top: 1em;
+}
+
+.scores table th {
+    text-align: center;
+    background-color: #eee;
+    padding: 5px;
+}
+
+.scores table td {
+    text-align: center;
+    padding: 5px;
+    font-size: 13px;
+    background-color: rgba(0,0,0,0.1);
+}

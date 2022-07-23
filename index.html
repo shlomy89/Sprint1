@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MINE SWEEPER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+</head>
+<body onload="initGame()">
+    <div class="background"></div>
+    
+    <div class="game">
+        <div class="header">
+            <h1 class="title">Mine Sweeper</h1>
+    
+            <div class="size-selector">
+                <label>Choose board size:</label>
+                <button name="difficulty" onclick="changeBoardSize(4, 2)">4</button>
+                <button name="difficulty" onclick="changeBoardSize(8, 12)">8</button>
+                <button name="difficulty" onclick="changeBoardSize(12, 30)">12</button>
+            </div>
+    
+            <div class="information">
+                <h2 class="marked">Marked: <span>0</span></h2>
+                <h2 class="timer">Time: <span>00:00</span></h2>
+                <h2 class="lives">Lives: <span>0</span></h2>
+            </div>
+
+            <div class="scores">
+                <table>
+                    <thead>
+                        <th>Level</th>
+                        <th>Best Score</th>
+                    </thead>
+                    <tbody>
+                        <!-- Populated from JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <button onclick="initGame()" class="smiley"></button>
+        </div>
+
+        <div class="board-container"></div>
+    
+        <div class="copyrights">© All rights reserved, Shlomy Vakrat 2022</div>
+    </div>
+
+    <div class="modal-wrapper">
+        <div class="modal">
+            <div class="content"></div>
+            <div class="modal-buttons">
+                <button onclick="toggleModal()">Close</button>
+                <button onclick="restartGame()">Play again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/score.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
